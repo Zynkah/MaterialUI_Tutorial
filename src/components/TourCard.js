@@ -79,7 +79,7 @@ const TourCard = ({ tour }) => {
             </Box>
             <Box>
               <Typography variant="h6" component="h3" marginTop={0}>
-                {tour.price}
+                ${tour.price}
               </Typography>
             </Box>
           </Box>
