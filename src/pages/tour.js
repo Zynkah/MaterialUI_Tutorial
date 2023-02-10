@@ -1,7 +1,11 @@
-import { Typography, Box } from "@mui/material";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
 import Container from "@mui/system/Container";
 import ImageCollage from "../components/ImageCollage";
 import SimpleAccordion from "../components/Accordian";
+import Paper from "@mui/material/Paper";
+import BottomNavigation from "@mui/material/BottomNavigation";
+import BasicModal from "../components/Modal";
 
 const Tour = () => (
   <Container sx={{ width: 900 }}>
@@ -28,12 +32,20 @@ const Tour = () => (
         Desert.
       </Typography>
     </Box>
-    <Box>
+    <Box marginBottom={10}>
       <Typography variant="h6" component="h4" marginTop={3} marginBottom={2}>
         F.A.Q.
       </Typography>
       <SimpleAccordion />
     </Box>
+    <Paper
+      sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
+      elevation={3}
+    >
+      <BottomNavigation>
+        <BasicModal />
+      </BottomNavigation>
+    </Paper>
   </Container>
 );
 
