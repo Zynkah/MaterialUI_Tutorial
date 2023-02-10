@@ -2,6 +2,7 @@ import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
+import Rating from "@mui/material/Rating";
 import { AccessTime } from "@mui/icons-material";
 
 const TourCard = () => {
@@ -37,8 +38,26 @@ const TourCard = () => {
               display: "flex",
               alignItems: "center",
             }}
+            marginTop={3}
           >
-            
+            <Rating
+              name="read-only"
+              value={4.5}
+              precision={0.5}
+              size="small"
+              readOnly
+            />
+            <Typography variant="body2" component="p" marginLeft={0.5}>
+              4.5
+            </Typography>
+            <Typography variant="body3" component="p" marginLeft={1.5}>
+              (655 reviews)
+            </Typography>
+          </Box>
+          <Box>
+            <Typography variant="h6" component="h3" marginTop={0}>
+              From C $147
+            </Typography>
           </Box>
         </Box>
       </Paper>
