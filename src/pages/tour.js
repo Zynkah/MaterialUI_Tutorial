@@ -1,6 +1,7 @@
 import { Typography, Box } from "@mui/material";
 import Container from "@mui/system/Container";
 import ImageCollage from "../components/ImageCollage";
+import SimpleAccordion from "../components/Accordian";
 
 const Tour = () => (
   <Container sx={{ width: 900 }}>
@@ -14,6 +15,24 @@ const Tour = () => (
         height={325}
       />
       <ImageCollage />
+    </Box>
+    <Box>
+      <Typography variant="h6" component="h4" marginTop={3}>
+        About this ticket
+      </Typography>
+      <Typography variant="paragraph" component="p" marginTop={3}>
+        Las Vegas, often known simply as Vegas, is the 25th-most populous city
+        in the United States, the most populous city in the state of Nevada, and
+        the county seat of Clark County. The city anchors the Las Vegas Valley
+        metropolitan area and is the largest city within the greater Mojave
+        Desert.
+      </Typography>
+    </Box>
+    <Box>
+      <Typography variant="h6" component="h4" marginTop={3} marginBottom={2}>
+        F.A.Q.
+      </Typography>
+      <SimpleAccordion />
     </Box>
   </Container>
 );

@@ -5,7 +5,7 @@ import ImageListItem from "@mui/material/ImageListItem";
 export default function ImageCollage() {
   return (
     <ImageList
-      sx={{ width: 300, height: 325, marginLeft: 1 }}
+      sx={{ width: 375, height: 325, marginLeft: 1 }}
       cols={3}
       rowHeight={164}
     >
