@@ -31,19 +31,15 @@ const theme = createTheme({
   },
 });
 
-const TourCard = () => {
+const TourCard = ({ tour }) => {
   return (
     <Grid item xs={3}>
       <ThemeProvider theme={theme}>
         <Paper elevation={3}>
-          <img
-            class="img"
-            src="https://th.bing.com/th/id/OIP.Tth3GWRfkrd1Ah3t7-wfwQHaE9?pid=ImgDet&rs=1"
-            alt="niagra falls"
-          />
+          <img class="img" src={tour.image} alt="" />
           <Box paddingX={1}>
             <Typography variant="subtitle1" component="h2">
-              Immerse into the Falls
+              {tour.name}
             </Typography>
             <Box
               sx={{
@@ -57,7 +53,7 @@ const TourCard = () => {
                 }}
               />
               <Typography variant="body2" component="p" marginLeft={0.5}>
-                5 hours
+                {tour.duration} hours
               </Typography>
             </Box>
             <Box
@@ -69,21 +65,21 @@ const TourCard = () => {
             >
               <Rating
                 name="read-only"
-                value={4.5}
+                value={tour.rating}
                 precision={0.5}
                 size="small"
                 readOnly
               />
               <Typography variant="body2" component="p" marginLeft={0.5}>
-                4.5
+                {tour.rating}
               </Typography>
               <Typography variant="body3" component="p" marginLeft={1.5}>
-                (655 reviews)
+                ({tour.numberOfReviews} reviews)
               </Typography>
             </Box>
             <Box>
               <Typography variant="h6" component="h3" marginTop={0}>
-                From C $147
+                {tour.price}
               </Typography>
             </Box>
           </Box>
